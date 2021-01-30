@@ -1,0 +1,2 @@
+# DaggerHiltSample
+sample for DaggerHilt
