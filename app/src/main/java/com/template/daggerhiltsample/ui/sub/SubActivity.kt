@@ -3,11 +3,11 @@ package com.template.daggerhiltsample.ui.sub
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.template.daggerhiltsample.R
 import dagger.hilt.android.AndroidEntryPoint
-
 
 @AndroidEntryPoint
 class SubActivity : AppCompatActivity(R.layout.activity_sub) {
@@ -18,7 +18,8 @@ class SubActivity : AppCompatActivity(R.layout.activity_sub) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.getText() // viewModelが使われていないと、initが呼ばれない.
+        viewModel.text = text
+        findViewById<TextView>(R.id.textView).text = text
     }
 
     companion object {
